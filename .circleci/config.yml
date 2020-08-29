@@ -19,7 +19,7 @@ test:
     - image: circleci/python:3.8.1
   steps:
     - checkout
-    - restore_cache
+    - restore_cache:
       key: deps-{{ checksum "requirements.lock" }}
     - run:
       command: |
